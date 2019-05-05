@@ -1,5 +1,5 @@
 /*
-Liquid flow rate sensor -DIYhacking.com Arvind Sanjeev
+Adapted from: Liquid flow rate sensor - DIYhacking.com Arvind Sanjeev
 
 Measure the liquid/water flow rate using this code. 
 Connect Vcc and Gnd of sensor to arduino, and the 
@@ -19,8 +19,8 @@ float calibrationFactor = 4.5;
 volatile byte pulseCount;  
 
 float flowRate;
-unsigned int flowMilliLitres;
-unsigned long totalMilliLitres;
+float flowMilliLitres;
+float totalMilliLitres;
 
 unsigned long oldTime;
 
@@ -43,9 +43,6 @@ void setup()
   totalMilliLitres  = 0.0;
   oldTime           = 0;
 
-  // The Hall-effect sensor is connected to pin 2 which uses interrupt 0.
-  // Configured to trigger on a FALLING state change (transition from HIGH
-  // state to LOW state)
   attachInterrupt(sensorInterrupt, pulseCounter, FALLING);
 }
 
@@ -79,15 +76,15 @@ void loop()
     // convert to millilitres.
     flowMilliLitres = (flowRate / 60) * 1000;
     
-    // Add the millilitres passed in this second to the cumulative total
     totalMilliLitres += flowMilliLitres;
 
-    // Print the flow rate for this second in litres / minute
-    Serial.println(flowRate);  // Print the integer part of the variable
-
-    // Print the cumulative total of litres flowed since starting      
-    Serial.println(totalMilliLitres);
-    Serial.println(totalMilliLitres/1000);  
+    if (flowRate != 0) {
+      Serial.print(flowRate);
+      Serial.print(" min/L");
+      Serial.print("\t");
+      Serial.print(totalMilliLitres/1000.0);  
+      Serial.println(" L");
+    }
 
     // Reset the pulse counter so we can start incrementing again
     pulseCount = 0;
@@ -98,7 +95,7 @@ void loop()
 }
 
 /*
-Insterrupt Service Routine
+Interrupt Service Routine
  */
 void pulseCounter()
 {
