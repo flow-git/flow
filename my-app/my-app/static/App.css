@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+.App {
+  text-align: center;
+}
+
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.login-field {
+  height:calc(10px + 2vmin);
+  font-size:calc(10px + 2vmin);
+  font-family:"Raleway";
+  border-radius: 10px;
+}
+
+.login-button {
+  font-size:calc(10px + 2vmin);
+  font-family:"Raleway";
+  border-radius: 10px;
+  background-color:rgba(230, 230, 230, 0.58);
+}
+
+.login-fields {
+  display: block;
+  width: 25%;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-setup {
+  font-size:calc(1px + 2vmin);
+  font-family:"Raleway";
+  color:white;
+}
+
+.login-about {
+  font-size:calc(1px + 2vmin);
+  font-family:"Raleway";
+  color:white;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+.sign-in {
+ /* The image used */
+ background-image: url('./background.jpg');
+
+ /* Full height */
+ height: fill-available;
+
+ text-align: center;
+
+ padding: 150px 50px;
+ margin-top: auto;
+ margin-bottom: auto;
+ margin-left: auto;
+ margin-right: auto;
+
+ /* Center and scale the image nicely */
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
