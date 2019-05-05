@@ -1,0 +1,27 @@
+# Quick run down
+
+Each page is a different js file inside the pages folder that exports a react component.
+To link to other pages you have to use the Link tag, which I've used a bit so you can see how i did it
+If you have any questions let me know, but so far it should be self explanatory. 
+
+when adding a page, you have to add it to next.config.json like this
+          '/': { page: '/' },
+          '/Data': {page: '/Data'},
+          '/newPage': {page: '/newPage'},
+
+to run its the usual
+
+start with:
+`npm install`
+
+then
+
+`npm run dev`
+
+to run it
+
+use `npm run build` 
+
+then `npm run export`
+
+This will create files for you to put on a webserver in the out folder
