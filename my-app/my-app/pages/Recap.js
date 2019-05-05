@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-const Data = () => (
+
+const Recap = () => (
     <div className="App">
         <Head>
             <title>Data Page</title>
@@ -11,13 +12,13 @@ const Data = () => (
             <p> data pages </p>
             <nav className="navbar">
                 <p><img className="img-logo" src="../static/F.png"></img></p>
-                <Link href="/Recap">
-                    <p><img className="toolbar" src="../static/toolbar.png"></img></p>
+                <Link href="/Data">
+                    <p><img className="toolbar" src="../static/toolbar2.png"></img></p>
                 </Link>
             </nav>
-            <img src="../static/homestats.png" className="homestats">
+            <img src="../static/recap.png" className="recap">
             </img>
         </body>
     </div>
 )
-export default Data
+export default Recap

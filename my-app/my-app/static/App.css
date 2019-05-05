@@ -72,6 +72,7 @@
 
  padding: 150px 50px;
  margin: -10px;
+ margin-left: -30px;
 
  /* Center and scale the image nicely */
  background-position: center;
@@ -104,6 +105,14 @@
 
 .homestats {
   margin-top: 15vh;
+  position: relative;
+  width: 70%;
+  height: auto;
+  position: center;
+}
+
+.recap {
+  margin-top: 12vh;
   position: relative;
   width: 70%;
   height: auto;

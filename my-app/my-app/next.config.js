@@ -4,7 +4,8 @@ module.exports = withImages({
     exportPathMap: function() {
         return {
           '/': { page: '/' },
-          '/Data': {page: '/Data'}
+          '/Data': {page: '/Data'},
+          '/Recap': {page: '/Recap'},
         }
       }
 })
