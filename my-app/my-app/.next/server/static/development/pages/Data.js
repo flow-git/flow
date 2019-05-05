@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -713,10 +713,17 @@ var Data = function Data() {
       lineNumber: 12
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    href: "/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -724,20 +731,20 @@ var Data = function Data() {
     src: "../static/F.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 14
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/Recap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 16
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 17
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -745,7 +752,7 @@ var Data = function Data() {
     src: "../static/toolbar.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 17
     },
     __self: this
   })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -753,7 +760,7 @@ var Data = function Data() {
     className: "homestats",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 20
     },
     __self: this
   })));
@@ -763,7 +770,7 @@ var Data = function Data() {
 
 /***/ }),
 
-/***/ 4:
+/***/ 6:
 /*!*****************************!*\
   !*** multi ./pages/Data.js ***!
   \*****************************/

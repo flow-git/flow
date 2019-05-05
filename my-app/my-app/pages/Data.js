@@ -10,7 +10,9 @@ const Data = () => (
         <body>
             <p> data pages </p>
             <nav className="navbar">
+                <Link href="/">
                 <p><img className="img-logo" src="../static/F.png"></img></p>
+                </Link>
                 <Link href="/Recap">
                     <p><img className="toolbar" src="../static/toolbar.png"></img></p>
                 </Link>

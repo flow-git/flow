@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -713,10 +713,17 @@ var Recap = function Recap() {
       lineNumber: 13
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    href: "/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -724,20 +731,20 @@ var Recap = function Recap() {
     src: "../static/F.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 15
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/Data",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 17
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 18
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -745,7 +752,7 @@ var Recap = function Recap() {
     src: "../static/toolbar2.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 18
     },
     __self: this
   })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -753,7 +760,7 @@ var Recap = function Recap() {
     className: "recap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 21
     },
     __self: this
   })));
@@ -763,7 +770,7 @@ var Recap = function Recap() {
 
 /***/ }),
 
-/***/ 5:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/Recap.js ***!
   \******************************/

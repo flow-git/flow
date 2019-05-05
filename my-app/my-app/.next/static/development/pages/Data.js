@@ -10598,10 +10598,17 @@ var Data = function Data() {
       lineNumber: 12
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    href: "/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -10609,20 +10616,20 @@ var Data = function Data() {
     src: "../static/F.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 14
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/Recap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 16
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 17
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -10630,7 +10637,7 @@ var Data = function Data() {
     src: "../static/toolbar.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 17
     },
     __self: this
   })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -10638,7 +10645,7 @@ var Data = function Data() {
     className: "homestats",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 20
     },
     __self: this
   })));
@@ -10648,7 +10655,7 @@ var Data = function Data() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 3:
 /*!*******************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2FData&absolutePagePath=%2FUsers%2Fanlinpanda%2Fgit%2Fflow%2Fmy-app%2Fmy-app%2Fpages%2FData.js ***!
   \*******************************************************************************************************************************************/
@@ -10671,5 +10678,5 @@ module.exports = dll_afa7b25a60452594c240;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=Data.js.map

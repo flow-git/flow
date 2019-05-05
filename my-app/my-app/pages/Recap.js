@@ -11,7 +11,9 @@ const Recap = () => (
         <body>
             <p> data pages </p>
             <nav className="navbar">
+                <Link href="/">
                 <p><img className="img-logo" src="../static/F.png"></img></p>
+                </Link>
                 <Link href="/Data">
                     <p><img className="toolbar" src="../static/toolbar2.png"></img></p>
                 </Link>

@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -922,7 +922,7 @@ module.exports = "/_next/static/images/text-logo-7bf49cb1244d2e8d74a28e16e0e5c9d
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
