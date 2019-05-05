@@ -1,13 +1,12 @@
 /*
-Adapted from: Liquid flow rate sensor - DIYhacking.com Arvind Sanjeev
-
-Measure the liquid/water flow rate using this code. 
-Connect Vcc and Gnd of sensor to arduino, and the 
-signal line to arduino digital pin 2.
- 
+Adapted from: Liquid flow rate sensor - DIYhacking.com Arvind Sanjeev and 
+https://www.arduino.cc/en/Tutorial/HelloWorld
  */
 
-byte statusLed    = 13;
+#include <LiquidCrystal.h>
+
+const int rs = 12, en = 11, d4 = 6, d5 = 5, d6 = 4, d7 = 3;
+LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 
 byte sensorInterrupt = 0;  // 0 = digital pin 2
 byte sensorPin       = 2;
@@ -19,29 +18,43 @@ float calibrationFactor = 4.5;
 volatile byte pulseCount;  
 
 float flowRate;
-float flowMilliLitres;
-float totalMilliLitres;
+float flowMilliLiters;
+float totalMilliLiters;
 
 unsigned long oldTime;
+unsigned long prevFlowRate;
+
+char msg[16];
+char perMin[10];
+char liters[14];
 
 void setup()
 {
   
   // Initialize a serial connection for reporting values to the host
   Serial.begin(9600);
-   
-  // Set up the status LED line as an output
-  pinMode(statusLed, OUTPUT);
-  digitalWrite(statusLed, HIGH);  // We have an active-low LED attached
+  lcd.begin(16, 3);
+
+  lcd.setCursor(0,0);
+  dtostrf(0.00, 4, 2, liters);
+  sprintf(msg, "%-14s L", liters);
+  lcd.print(msg);
+
+
+  lcd.setCursor(0,1);
+  dtostrf(0.00, 4, 2, perMin);
+  sprintf(msg, "%-10s L/min", perMin);
+  lcd.print(msg);
   
   pinMode(sensorPin, INPUT);
   digitalWrite(sensorPin, HIGH);
 
   pulseCount        = 0;
   flowRate          = 0.0;
-  flowMilliLitres   = 0.0;
-  totalMilliLitres  = 0.0;
+  flowMilliLiters   = 0.0;
+  totalMilliLiters  = 0.0;
   oldTime           = 0;
+  prevFlowRate = 0;
 
   attachInterrupt(sensorInterrupt, pulseCounter, FALLING);
 }
@@ -54,37 +67,39 @@ void loop()
    
    if((millis() - oldTime) > 1000)    // Only process counters once per second
   { 
-    // Disable the interrupt while calculating flow rate and sending the value to
-    // the host
     detachInterrupt(sensorInterrupt);
         
-    // Because this loop may not complete in exactly 1 second intervals we calculate
-    // the number of milliseconds that have passed since the last execution and use
-    // that to scale the output. We also apply the calibrationFactor to scale the output
-    // based on the number of pulses per second per units of measure (litres/minute in
-    // this case) coming from the sensor.
     flowRate = ((1000.0 / (millis() - oldTime)) * pulseCount) / calibrationFactor;
     
-    // Note the time this processing pass was executed. Note that because we've
-    // disabled interrupts the millis() function won't actually be incrementing right
-    // at this point, but it will still return the value it was set to just before
-    // interrupts went away.
     oldTime = millis();
     
-    // Divide the flow rate in litres/minute by 60 to determine how many litres have
-    // passed through the sensor in this 1 second interval, then multiply by 1000 to
-    // convert to millilitres.
-    flowMilliLitres = (flowRate / 60) * 1000;
+    flowMilliLiters = (flowRate / 60) * 1000;
     
-    totalMilliLitres += flowMilliLitres;
+    totalMilliLiters += flowMilliLiters;
 
-    if (flowRate != 0) {
+//    if (flowRate != prevFlowRate) {
+        lcd.setCursor(0,0);
+        dtostrf(totalMilliLiters/1000.0, 4, 2, liters);
+        sprintf(msg, "%-14s L", liters);
+        lcd.print(msg);
+//        lcd.print(totalMilliLiters/1000.0);
+//        lcd.print(" L");
+
+        lcd.setCursor(0,1);
+        dtostrf(flowRate, 4, 2, perMin);
+        sprintf(msg, "%-10s L/min", perMin);
+        lcd.print(msg);
+//        lcd.print(flowRate);
+//        lcd.print(" L/min");
+
+        prevFlowRate = flowRate;
+//   }
+
       Serial.print(flowRate);
       Serial.print(" min/L");
       Serial.print("\t");
-      Serial.print(totalMilliLitres/1000.0);  
+      Serial.print(totalMilliLiters/1000.0);  
       Serial.println(" L");
-    }
 
     // Reset the pulse counter so we can start incrementing again
     pulseCount = 0;
