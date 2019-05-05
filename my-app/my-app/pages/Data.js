@@ -13,10 +13,8 @@ const Data = () => (
       <p><img className="img-logo" src="../static/F.png"></img></p>
       <p><img className="toolbar" src="../static/toolbar.png"></img></p>
      </nav>
+     <img src="../static/homestats.png" className="homestats"></img>
       </body>
-      <Link href="/">
-      <button className="button-home"> log out </button>
-      </Link>
     </div>
 )
 export default Data
