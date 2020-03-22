@@ -6,6 +6,7 @@ For Girls in Tech Hacking for Humanity 2019, Allison Chiang, Angela Dai, Anlin C
 
 ## Media
 - [Presentation: Slide Deck](https://github.com/flow-git/flow/blob/master/FLOW.pdf)
+- [Devpost Submission](https://devpost.com/software/flow-puwafo)
 
 ## Techonolgies Used
 - Arduino with Water Flow Meter
